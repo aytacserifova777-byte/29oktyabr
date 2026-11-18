@@ -1,0 +1,21 @@
+
+mebleg = float(input("Sifarişin məbləğini daxil edin: "))
+
+if mebleg < 0:
+    print("Xəta! Mənfi məbləğ daxil etmək olmaz.")
+
+else:
+    if mebleg >= 200:
+        endirim = mebleg * 0.20
+    elif mebleg >= 100:
+        endirim = mebleg * 0.10
+    else:
+        endirim = 0
+
+    yekun = mebleg - endirim
+
+    status = "Endirim qazandınız" if endirim > 0 else "Endirim yoxdur"
+
+    print("Endirim:", endirim, "AZN")
+    print("Yekun məbləğ:", yekun, "AZN")
+    print("Status:", status)
